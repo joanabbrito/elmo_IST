@@ -26,30 +26,50 @@ Upon receiving the robot, plug the charger into the charging port and press the 
 
 :warning: The robot is noisy. The noise comes from the charging cable being plugged and can be eliminated if unplugged.
 
+## Connect to Elmo 
+
 When powered on, Elmo will create a hotspot. You can use your device to connect to this hotspot.
 
 name: _Elmo_
 
 password: _1234567890_
 
-# REST API
+# Use Elmo
 
-## Neck movement (pan and tilt)
+Now you can use Elmo. To control Elmo's behaviour you can use 1) ssh to access files and scripts; 2) the REST API; 3) the companion app.
 
-## Face (change image/gif/video on screen)
+## 1) Communicate with Elmo via ssh
+When connected to Elmo's hotspot, you can access Elmo's files remotely via ssh. Connect to Elmo via ssh by writing in the terminal / command line: `ssh idmind@10.42.0.1`. The __password__ is: `asdf`.
 
-## Chest (change LEDs)
+## 2) Communicate with Elmo via the REST API
 
-## Other behaviours
+### Neck movement (pan and tilt)
 
-### Blush
+### Face (change image/gif/video on screen)
+
+### Chest (change LEDs)
+
+### Other behaviours
+
+#### Blush
 
 ### Default screen image
 
-# Developing Elmo (ROS)
-
-# Companion app
+## 3) Communicate with Elmo via the Companion app
 
 The companion app source code is available inside the catkin_elmo/app folder.
 
+    - control the chest LEDs;
+    - change the screen;
+    - play Audio files;
+    - toggle behaviours;
+    - inspect touch sensors;
+    - control the pan/tilt motors;
+    - upload and delete multimedia files;
+    - upload wifi credentials;
+    - shutdown;
+
 :warning: The application was built using PyQt5 python module. There is no compatible version of this module for MAC OS Apple Silicon (M1/M2) devices.
+
+# Developing Elmo (ROS)
+
