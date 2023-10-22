@@ -6,9 +6,8 @@ using UnityEngine;
 
 /*
  * C# Wrapper to control the Robot Elmo
- * Has a wrapper for every available command on the github
  * Connects to the robot and allows users to send POSTS and GET requests to the robot
- * Only works if the Companion App is open and connected to the robot
+ * Only works if connected to the robot's hotspot 
  */
 namespace ElmoController
 {
