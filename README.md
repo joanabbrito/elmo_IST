@@ -46,6 +46,8 @@ password: _1234567890_
 
 ### Default screen image
 
+# Developing Elmo (ROS)
+
 # Companion app
 
 The companion app source code is available inside the catkin_elmo/app folder.
