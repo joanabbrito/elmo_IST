@@ -94,6 +94,6 @@ rosnode list
 
 # FAQ and common problems
 
-:warning: __You try to turn off Elmo (power button in the bottom of his back) and the screen shuts down but the light on the bottom of his back (next to the power button) stays on__, 
+:warning: __You try to turn off Elmo (power button in the bottom of his back) and the screen shuts down but the light on the bottom of his back (next to the power button) stays on__
 
 You have to unscrew Elmo's cover (grey part on the bottom) using an appropriate screwdriver (in the robot room, 3rd drawer from the 2nd row of drawers counting from the right, white dresser behind the door) and manually remove the battery's plug. Afterwards, you can reconnect it, screw the bottom back on and turn on Elmo as usually.
