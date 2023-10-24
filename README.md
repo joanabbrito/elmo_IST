@@ -45,9 +45,13 @@ When connected to Elmo's hotspot, you can access Elmo's files remotely via ssh. 
 
 ### Neck movement (pan and tilt)
 
-### Face (change image/gif/video on screen)
+### Face (change image/gif/video on screen) and voice (sounds)
 
-/home/idmind/elmo/catkin_elmo/src/elmo/src/static/ images | sounds
+The files need to be placed in a particular directory `/home/idmind/elmo/catkin_elmo/src/elmo/src/static/folder` in which `folder` is either `images` or `sounds`.
+
+To place files in Elmo, use the following ssh command to access that remote location: `scp filename idmind@10.42.0.1:/home/idmind/elmo/catkin_elmo/src/elmo/src/static/folder`. Replace `folder` with `images` or `sounds` and `filename` with the specific image or sound file and use this command from the directory in your local machine that contains the file.
+
+:warning: sound files should be in .wav format. .mp3 files do not work.
 
 ### Chest (change LEDs)
 
@@ -83,6 +87,7 @@ The companion app source code is available inside the catkin_elmo/app folder.
 Python development
 /home/idmind/elmo/catkin_elmo/src/elmo/src
 robot_server.py
+robot.py
 touch_sensors.py
 
 rosnode list
