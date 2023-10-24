@@ -13,7 +13,7 @@ Robot features:
     - USB Camera with microphone;
     - Touch sensors on top of head.
 
-:warning: This version of software has no support for the camera hardware or any of its features.
+:warning: This version of Elmo's software has no support for the camera hardware or any of its features.
 
 # Getting started
 
