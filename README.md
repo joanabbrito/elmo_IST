@@ -47,11 +47,18 @@ When connected to Elmo's hotspot, you can access Elmo's files remotely via ssh. 
 
 ### Face (change image/gif/video on screen)
 
+/home/idmind/elmo/catkin_elmo/src/elmo/src/static/ images | sounds
+
 ### Chest (change LEDs)
 
 ### Other behaviours
 
 #### Blush
+Blush behaviour consists of heart eyes image on screen, moving ECG figure in the chest LEDs and a characteristic noise.
+
+Elmo will exhibit "blush" behaviour when touch sensors in the head are activated (i.e. when he is petted). It might be possible to activate touch sensors in chest using the `touch_sensors.py` script (not tested yet).
+
+To verify whether blush behaviour is active, you can access Elmo via ssh (as explained in 1) and check out the list of active nodes with `rosnode list` and look for a node named `/blush`. In order to deactivate this behaviour you can `rosnode kill /blush`.
 
 ### Default screen image
 
@@ -73,3 +80,15 @@ The companion app source code is available inside the catkin_elmo/app folder.
 
 # Developing Elmo (ROS)
 
+Python development
+/home/idmind/elmo/catkin_elmo/src/elmo/src
+robot_server.py
+touch_sensors.py
+
+rosnode list
+
+# FAQ and common problems
+
+:warning: __You try to turn off Elmo (power button in the bottom of his back) and the screen shuts down but the light on the bottom of his back (next to the power button) stays on__, 
+
+You have to unscrew Elmo's cover (grey part on the bottom) using an appropriate screwdriver (in the robot room, 3rd drawer from the 2nd row of drawers counting from the right, white dresser behind the door) and manually remove the battery's plug. Afterwards, you can reconnect it, screw the bottom back on and turn on Elmo as usually.
