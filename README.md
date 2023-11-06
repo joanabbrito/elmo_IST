@@ -85,15 +85,30 @@ The companion app source code is available inside the catkin_elmo/app folder.
 # Developing Elmo (ROS)
 
 Python development
+
+Location of Elmo's "core":
 /home/idmind/elmo/catkin_elmo/src/elmo/src
+Relevant files:
 robot_server.py
 robot.py
 touch_sensors.py
 
-rosnode list
+To ckeck for active rosnodes: `rosnode list`
+If relevant nodes ar enot active, Elmo will not work
 
 # FAQ and common problems
 
 :warning: __You try to turn off Elmo (power button in the bottom of his back) and the screen shuts down but the light on the bottom of his back (next to the power button) stays on__
 
 You have to unscrew Elmo's cover (grey part on the bottom) using an appropriate screwdriver (in the robot room, 3rd drawer from the 2nd row of drawers counting from the right, white dresser behind the door) and manually remove the battery's plug. Afterwards, you can reconnect it, screw the bottom back on and turn on Elmo as usually.
+
+:warning: __You turn on Elmo (power button in the bottom of his back) and you see Raspberry Pi's home screen instead of his face (asking for password)__
+
+You most lilely have to clean Elmo's disk space. Connect to Elmo via ssh (as described above).
+To discover if this really is the problem, check disk usage with `df -h`. If `dev/root` is over 85% use, do the following:
+
+In order to find the files that are filling up the cache, connect to Elmo via ssh (as described above) and use the following command to find out top 10 largest file/directories: `du -a /var | sort -n -r | head -n 10`. Delete them with caution. Run `df -h` again to verify disk usage.
+
+From previous experience: delete all .mkv files in this directory: `cd /var/lib/motion`.
+
+
